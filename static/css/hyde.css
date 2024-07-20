@@ -31,7 +31,7 @@
  * Update the foundational and global aspects of the page.
  */
 
-html {
+ html {
   font-family: 'Open Sans', 'Roboto', Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
@@ -171,7 +171,7 @@ footer {
 footer a,
 .content a,
 .related-posts li a:hover {
-  color: #49757a;
+  color: #5252e7;
 }
 
 .read-more-link {
@@ -201,7 +201,7 @@ ul.posts {
 }
 
 .social-icons,
-.sidebar nav {
+.sidebar nav { 
   margin-top: 1rem;
 }
 
@@ -370,4 +370,61 @@ figcaption {
 
 .nowrap {
   white-space: nowrap;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
+  gap: 15px;
+  margin-top: 1rem;
+  width: 100%;
+  padding-left: 30%; /* Adjust this value to center the block of icons */
+}
+
+.social-icon-item {
+  display: flex;
+  width: 100%;
+}
+
+.social-icon-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.social-icon-item i {
+  width: 30px; /* Fixed width for all icons */
+  margin-right: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.social-icon-text {
+  font-size: 0.9em;
+}
+
+
+.sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+  text-align: center; /* Center-align the list items */
+}
+
+.sidebar-nav li {
+  font-size: 0.9rem; /* Reduce font size, adjust as needed */
+  margin-bottom: 0.5rem; /* Add some space between items */
+}
+
+/* Style for the email and location text */
+.sidebar-nav li:nth-child(-n+2) {
+  font-size: 0.8rem; /* Even smaller font for email and location */
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+}
+
+/* Style for the navigation links */
+.sidebar-nav li a {
+  font-size: 1rem; /* Slightly larger font for navigation links */
 }

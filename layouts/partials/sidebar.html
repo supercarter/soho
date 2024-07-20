@@ -26,8 +26,12 @@
 
     <nav>
       <ul class="sidebar-nav">
+        <li class="email-item">
+          <i class="fas fa-envelope"></i> <!-- Mail icon -->
+          <span>carter.chene26@gmail.com</span>
+        </li>
         <li>
-          <a href="{{ .Site.BaseURL }}">Home</a>
+          Data engineer based in Calgary, AB.
         </li>
         {{ range .Site.Menus.main -}}
         <li>
@@ -37,11 +41,16 @@
       </ul>
     </nav>
 
+    <br/>
+
     <section class="social-icons">
       {{ range $item := .Site.Params.socialIcons }}
-      <a href="{{ $item.url }}" rel="me" title="{{ $item.title }}" target="_blank">
-        <i class="fab {{ $item.icon }}" aria-hidden="true"></i>
-      </a>
+      <div class="social-icon-item">
+        <a href="{{ $item.url }}" rel="me" title="{{ $item.title }}" target="_blank">
+          <i class="fab {{ $item.icon }}" aria-hidden="true"></i>
+          <span class="social-icon-text">&nbsp;&nbsp;{{ $item.title }}</span>
+        </a>
+      </div>
       {{ end }}
     </section>
   </div>
